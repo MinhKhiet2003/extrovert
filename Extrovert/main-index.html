@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extrovent</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap">
+</head>
+<body>
+    <div class="header">
+        <div class="nav-left">
+            <span><a href="main-index.html">Extrovent</a></span>
+        </div>
+        <div class="nav_header">
+            <a href="main-index.html"><i class="nav-header fa-solid fa-house"></i></a>
+            <a href="index-friend/index-Friend.html"><i class="nav-header fa-solid fa-user-group"></i></a>
+            <a href="watch/index.html"><i class="nav-header fa-solid fa-film"></i></a>
+            <a href="mess/index-mess.html"><i class="nav-header fa-regular fa-comment"></i></a>
+        </div>
+        <div class="nav-right">
+            <img src="img/imgavt.jpg" alt="">
+            <div class="tendangnhap username">Minh Khiết</div>            
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar  sidebar-left">
+            <div class="main-title">
+                <h1><a href="main-index.html">Trang chủ</a></h1>
+            </div>
+            <div class="btn-wrapper">
+                
+                
+                        <button class="button-wrapper">
+                            <i class="fa-solid fa-compass"></i>
+                            <label class="button-label">
+                                Khám phá
+                            </label>
+                        </button>
+                    
+                        
+                        <button class="button-wrapper">
+                            <i class="fa-solid fa-heart-circle-plus"></i>
+                            <label class="button-label">
+                                Theo dõi
+                            </label>
+                        </button>
+                    
+                        
+                        <button class="button-wrapper">
+                                <i class="fa-solid fa-flag"></i>
+                                <label class="button-label">
+                                    Trang của bạn
+                                </label>
+                        </button> 
+                    
+                        
+                        <button class="button-wrapper buttonplus">
+                            <i class="fa-solid fa-circle-plus"></i>
+                            <label class="button-label">
+                                Tạo trang
+                            </label>
+                        </button> 
+                    <ul id="menuuu">
+                        <li>
+                            <div class="btn-wrapperchild">
+                                
+                                <div id="btn-child">
+                                    <ul>
+                                    <li>
+                                        <i class="fa-solid fa-gear"></i>
+                                        Cài đặt
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-user-pen"></i>
+                                        Chỉnh sửa thông tin cá nhân
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-flag"></i>
+                                        Trang của bạn
+                                    </li>
+                                    <li>
+                                        <input type="button" value="Đăng xuất" onclick="menuseting()">
+                                    </li>
+                                    </ul>
+                                </div>
+                                <button class="button-wrapper" >
+                                    <i class="fa-solid fa-bars" ></i>
+                                    <label class="button-label">
+                                        Xem thêm
+                                    </label>
+                                </button>
+                            </div>
+                    </li>
+                </ul>
+                
+            </div>
+
+        </div>
+        <div class="content">
+           
+            <div class="main-content">
+                <div class="my-profile">
+                    <img src="img/imgavt.jpg" alt="">
+                    <input type="button" value="Đăng bài viết" id="dangbai">
+                    <i class="fa-solid fa-image"></i>
+                </div>
+                
+                <!-- new-post -->
+
+                <div class="new_post">
+                    <div class="content-title">
+
+                        <div class="user">
+                            <img src="img/imgavt.jpg" alt="">
+                            <div class="title">
+                                <div class="username1"></div>
+                                <p>Vừa xong <i class="riengtupost"></i></p>
+                            </div>
+                            <div class="title-menu">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+    
+                        <div class="article">
+                            <div id="text_newpost">
+                            </div>
+                            <img src="" alt="" class="new_img">
+                        </div>
+                         <div class="imgcomment">
+                            <div class="img-icon_comment like-btn" onclick="handleLiked0(this)">
+                               <i class="fa-solid fa-thumbs-up"></i>
+                            <p>Thích</p> 
+                            </div>
+                            <div class="img-icon_comment">
+                                <i class="fa-regular fa-comments"></i>
+                                <p>Bình luận</p>
+                            </div>
+                            <div class="img-icon_comment">
+                                <i class="fa-solid fa-share"></i>
+                                <p>Chia sẻ</p>
+                            </div>
+                        </div>
+
+                         <div class="new_cmt user_comment">
+                            <div class="user-cmt" id="new-post-cmt-wrapper">
+                                
+                            </div>
+                        </div> 
+
+                        <div class="my-user">
+                            <img src="img/imgavt.jpg" alt="">
+                            <div class="my-icon">
+                                <input onkeydown="inputEnterAction()" type="text" placeholder="viết bình luận..." id="new_textinp">
+                                <i class="fa-solid fa-paper-plane " id="sent_cmt" onclick="addNewCmt()"></i>
+                                <i class="fa-solid fa-face-smile"></i>
+                                <i class="fa-solid fa-camera"></i>
+                                <i class="fa-solid fa-image"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- post 1  -->
+                <div class="content-title">
+
+                    <div class="user">
+                        <img src="img/girl-xinh-9-481x600.jpg" alt="">
+                        <div class="title">
+                            <span>Phùng Thị Trang</span>
+                            <p>2 phút trước <i class="fa-solid fa-earth-americas"></i></p>
+                        </div>
+                        <div class="title-menu">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+
+                    <div class="article">
+                        <div>
+                            đến hẹn lại lên hihi
+                        </div>
+                        <img src="img/Phung thi trang.jpg" alt="">
+                    </div>
+
+                    <div class="comment">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <img src="img/Phung thi trang.jpg" alt="">
+                        <p id="like1">277</p>
+                        <span>1 bình luận</span>
+                    </div>
+                    <div class="imgcomment">
+                        <div class="img-icon_comment like-btn" onclick="handleLiked(this)">
+                           <i class="fa-solid fa-thumbs-up"></i>
+                        <p>Thích</p> 
+                        </div>
+                        <div class="img-icon_comment">
+                            <i class="fa-regular fa-comments"></i>
+                            <p>Bình luận</p>
+                        </div>
+                        <div class="img-icon_comment">
+                            <i class="fa-solid fa-share"></i>
+                            <p>Chia sẻ</p>
+                        </div>
+                    </div>
+                    <div class="user_comment">
+                        <div class="user-cmt">
+                            <div class="cmt">
+                                <img src="img/download.jpg" alt="">
+                                <div class="idea">
+                                    <label>Đức Thắng</label>
+                                    <p>gu toy các ông ơi</p>
+                                </div>
+                            </div>
+                            <div class="idea-like">
+                                <a>thích</a>
+                                <a>trả lời</a>
+                                <p> 1 phút trước</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="my-user">
+                        <img src="img/imgavt.jpg" alt="">
+                        <div class="my-icon">
+                            <input type="text"  placeholder="viết bình luận..." >
+                            <i class="fa-solid fa-paper-plane" ></i>
+                            <i class="fa-solid fa-face-smile"></i>
+                            <i class="fa-solid fa-camera"></i>
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- post 2  -->
+
+                <div class="content-title">
+
+                    <div class="user">
+                        <img src="img//girl-xinh-7.jpg" alt="">
+                        <div class="title">
+                            <span>Đỗ Thị Thùy Dung</span>
+                            <p> 1 ngày trước <i class="fa-solid fa-earth-americas"></i></p>
+                        </div>
+                        <div class="title-menu">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+
+                    <div class="article">
+                        <div>
+                            cute hongggggg nè
+                        </div>
+                        <img src="img/post 2.jpg" alt="">
+                    </div>
+
+                    <div class="comment">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <img src="img/girl-xinh-7.jpg" alt="">
+                        <p>2.3k</p>
+                        <span>113 bình luận</span>
+                    </div>
+                    <div class="imgcomment">
+                        <div class="img-icon_comment" onclick="handleLiked2(this)">
+                           <i class="fa-solid fa-thumbs-up"></i>
+                        <p>thích</p> 
+                        </div>
+                        <div class="img-icon_comment">
+                            <i class="fa-regular fa-comments" onclick="hanlecomt1()"></i>
+                            <p>bình luận</p>
+                        </div>
+                        <div class="img-icon_comment">
+                            <i class="fa-solid fa-share"></i>
+                            <p>chia sẻ</p>
+                        </div>
+                    </div>
+                    <div class="user_comment">
+                        <div class="user-cmt">
+                            <div class="cmt">
+                                <img src="img/anh-trai-dep-deo-kinh-600x600.jpg" alt="">
+                                <div class="idea">
+                                    <label>Đỗ Đức Tùng</label>
+                                    <p>không pé ơi</p>
+                                </div>
+                            </div>
+                            <div class="idea-like">
+                                <a>thích</a>
+                                <a>trả lời</a>
+                                <p> 1 phút trước</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-user">
+                        <img src="img/imgavt.jpg" alt="">
+                        <div class="my-icon">
+                            <input type="text" placeholder="viết bình luận..." id="cmt1">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <i class="fa-solid fa-face-smile"></i>
+                            <i class="fa-solid fa-camera"></i>
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- post 3  -->
+
+                 <div class="content-title">
+
+                    <div class="user">
+                        <img src="img/avt trai son la.jpeg" alt="">
+                        <div class="title">
+                            <span>Trai Sơn La</span>
+                            <p> 1 tuần trước <i class="fa-solid fa-earth-americas"></i></p>
+                        </div>
+                        <div class="title-menu">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+
+                    <div class="article">
+                        <div>
+                            tim' nờ i
+                        </div>
+                        <img src="img/trai son la.jpg" alt="">
+                    </div>
+
+                    <div class="comment">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <img src="img/girl-xinh-7.jpg" alt="">
+                        <p>2</p>
+                        <span></span>
+                    </div>
+                    <div class="imgcomment">
+                        <div class="img-icon_comment" onclick="handleLiked3(this)">
+                           <i class="fa-solid fa-thumbs-up" ></i>
+                        <p>Thích</p> 
+                        </div>
+                        <div class="img-icon_comment">
+                            <i class="fa-regular fa-comments"></i>
+                            <p>Bình luận</p>
+                        </div>
+                        <div class="img-icon_comment">
+                            <i class="fa-solid fa-share"></i>
+                            <p>Chia sẻ</p>
+                        </div>
+                    </div>
+                    <div class="user_comment">
+                        <div class="user-cmt">
+                            <div class="cmt">
+                                <img src="img/girl-xinh-7.jpg" alt="">
+                                <div class="idea">
+                                    <label>Đỗ Thị Thùy Dung</label>
+                                    <p>đẹp trai là một tội áccc đó anh zai</p>
+                                </div>
+                            </div>
+                            <div class="idea-like">
+                                <a>thích</a>
+                                <a>trả lời</a>
+                                <p> 30 giây trước</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-user">
+                        <img src="img/imgavt.jpg" alt="">
+                        <div class="my-icon">
+                            <input type="text" placeholder="viết bình luận...">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <i class="fa-solid fa-face-smile"></i>
+                            <i class="fa-solid fa-camera"></i>
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                    </div>
+                </div> 
+
+            
+
+
+            </div>
+            
+        </div>
+        <div class=" sidebar sidebar-right">
+            <div class="seach">
+               <div class="header_seach">
+                <input type="text">
+                <a href="#" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </a>
+                </div> 
+            </div>
+            
+            <div class="title-right">
+                <div class="nav-title">
+                    <h4>gợi ý cho bạn</h4>
+                    <a href="#">xem tất cả</a>
+                </div>
+            </div>
+
+            <button class="button-wrapper">
+                <img src="img/291606567_754524409029061_6436237890765867282_n.jpg" alt="">
+                <label class="button-label">
+                    Trang Hà 
+                </label>
+                <div class="hoatdong"></div>
+            </button>
+
+            <button class="button-wrapper">
+                <img src="img/girl-xinh-7.jpg" alt="">
+                <label class="button-label">
+                    Đỗ Thị Thùy Dung
+                </label>
+                <div class="hoatdong"></div>
+            </button>
+
+            <button class="button-wrapper">
+                <img src="img/girl-xinh-9-481x600.jpg" alt="">
+                <label class="button-label">
+                    Phùng Thị Trang
+                </label>
+                <div class="hoatdong"></div>
+            </button>
+
+            <button class="button-wrapper">
+                <img src="img/anh-trai-dep-deo-kinh-600x600.jpg" alt="">
+                <label class="button-label">
+                    Đỗ Đức Tùng
+                </label>
+                <div class="hoatdong"></div>
+            </button>
+
+            <button class="button-wrapper">
+                <img src="img/download.jpg" alt="">
+                <label class="button-label">
+                    Đức Thắng
+                </label>
+                <div class="hoatdong"></div>    
+            </button>
+
+            <div class="sidebar-wrapper">
+                <div>
+                    <a href="#" class="sidebar-link">Điều khoản sử dụng</a>
+                    <a href="#" class="sidebar-link">Hỗ trợ khách hàng</a> 
+                </div>
+                
+                <a href="#" class="sidebar-link">Extrovent 2022</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenchill">
+                
+        <div id="dangbaiviet">
+           <div class="title-dangbai">
+            <div id="taobaiviet">Tạo bài viết</div>
+            <input type="button" value="X" id="exitpost">
+        </div>
+            <div class="user-post">
+                <img src="img/imgavt.jpg" alt="">
+                <div class="title-dangbai_child">
+                    <span class="username2">Minh Khiết</span>
+                    <div>
+                        <select  id="riengtu" >
+                            <option value="quyenriengtu">quyển riêng tư</option>
+                            <option value="moinguoi"><button> <i class="fa-solid fa-user-group"></i> Mọi người</button></option>
+                            <option value="banbe"> Bạn Bè</option>
+                    </select>
+                    </div>
+                </div>
+            </div>
+            <textarea name="" id="" cols="99" rows="10" placeholder="bạn muốn nói gì sao???" class="text_post"></textarea>
+            <form id="uploadForm" method="post" enctype="multipart/form-data">
+                <input type="file" name="myFile" id="ipt"/>
+              </form>
+            <button id="sent_post"><i class="fa-solid fa-square-plus"></i></button>
+        </div> 
+    </div>
+</body>
+<script src="assets/scrip.js"></script>
+<script href="login/main.js"></script>
+</html>

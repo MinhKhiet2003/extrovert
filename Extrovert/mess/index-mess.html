@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger</title>
+    <link rel="stylesheet" href="style_mess.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/scrip.js">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap">
+</head>
+<body>
+
+    <div class="header">
+        <div class="nav-left">
+            <span><a href="../main-index.html">Extrovent</a></span>
+        </div>
+        <div class="nav_header">
+            <a href="../main-index.html"><i class="nav-header fa-solid fa-house"></i></a>
+            <a href="../index-friend/index-Friend.html"><i class="nav-header fa-solid fa-user-group"></i></a>
+            <a href="../watch/index.html"><i class="nav-header fa-solid fa-film"></i></a>
+            <a href="index-mess.html"><i class="nav-header fa-regular fa-comment"></i></a>
+        </div>
+        <div class="nav-right">
+            <img src="../img/imgavt.jpg" alt="">
+            <div class="tendangnhap">Minh Khiết</div>            
+
+        </div>
+    </div>
+    <div class="container">
+        <div class=" sidebar sidebar-left">
+            <div class="seach">
+               <div class="header_seach">
+                   <a href="#" class="search-btn">
+                       <i class="fas fa-search"></i>
+                   </a>
+                <input type="text">
+                </div> 
+            </div>
+    
+            <button class="button-wrapper">
+                <img src="../img/291606567_754524409029061_6436237890765867282_n.jpg" alt="">
+                <label class="button-label">
+                    Trang Hà 
+                </label>
+                <div class="hoatdong"></div>
+            </button>
+    
+            <button class="button-wrapper btn1">
+                <img src="../img/girl-xinh-7.jpg" alt="">
+                <label class="button-label">
+                    Đỗ Thị Thùy Dung
+                </label>
+                <div class="hoatdong"></div>
+            </button>
+    
+            <button class="button-wrapper">
+                <img src="../img/girl-xinh-9-481x600.jpg" alt="">
+                <label class="button-label">
+                    Phùng Thị Trang
+                </label>
+                <div class="hoatdong"></div>
+            </button>
+    
+            <button class="button-wrapper">
+                <img src="../img/anh-trai-dep-deo-kinh-600x600.jpg" alt="">
+                <label class="button-label">
+                    Đỗ Đức Tùng
+                </label>
+                <div class="hoatdong"></div>
+            </button>
+    
+            <button class="button-wrapper">
+                <img src="../img/download.jpg" alt="">
+                <label class="button-label">
+                    Đức Thắng
+                </label>
+                <div class="hoatdong"></div>    
+            </button>
+    
+            
+        </div>
+        
+        
+        <div class="content">
+            <div class="username">
+                <img src="../img/291606567_754524409029061_6436237890765867282_n.jpg" alt="">
+                <div class="user">
+                    <p>Trang Hà</p>
+                    <div>
+                        <span>đang hoạt động</span> <div class="hoatdong"></div> 
+                   </div>
+                    
+                </div>
+                <div class="contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <i class="fa-solid fa-video"></i>
+                    <i class="fa-solid fa-circle-question"></i>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="profile">
+                    <div class="profile_user">
+                        <div><img src="../img/291606567_754524409029061_6436237890765867282_n.jpg" alt=""></div>
+                        <div class="name">Trang Hà</div>
+                        <div class="love">Đã lấy chồng</div>
+                        <div class="information">278 người theo dõi · 0 bài viết</div>
+                    </div>
+                </div>
+                <div class="mess"></div>
+
+            
+                
+                <div class="messenger">
+                    <div>
+                        <i class="fa-solid fa-circle-plus"></i>
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                    <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <input type="text" placeholder="nhập tin nhắn" class="text_messenger" onkeydown="handleInputCreateNewMesasage(this)">
+                    <i class="fa-solid fa-paper-plane btn_messenger" onclick="createNewMessage()"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script>
+        var btn_messenger = document.getElementsByClassName('btn_messenger')
+        var text_messenger = document.getElementsByClassName('text_messenger')
+        var mess = document.getElementsByClassName('mess')
+        var content = document.getElementsByClassName('content')
+        function createNewMessage(){
+            if(text_messenger[0].value.length != 0){
+                const div = document.createElement('div')
+                div.className = 'text_mess';
+                div.innerHTML = text_messenger[0].value;
+                div.style.margin = '30px';
+                mess[0].appendChild(div);
+                text_messenger[0].value = "";
+            }
+        }
+        const handleInputCreateNewMesasage = () => {
+            if(event.key === 'Enter')
+                createNewMessage()
+        }
+
+        
+        
+
+        var  btn_swaper = document.getElementsByClassName('button-wrapper')
+        btn_swaper[0].onclick = function(){
+            btn_swaper[0].style.backgroundColor = 'rgb(192, 192, 192)';
+            content[0].style.display = 'block';
+        }
+        
+    </script>
+</body>
+</html>

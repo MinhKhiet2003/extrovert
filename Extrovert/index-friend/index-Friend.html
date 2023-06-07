@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap">
+</head>
+<body>
+    <div class="header">
+        <div class="nav-left">
+            <span><a href="../main-index.html">Extrovent</a></span>
+        </div>
+        <div class="nav_header">
+            <a href="../main-index.html"><i class="nav-header fa-solid fa-house"></i></a>
+            <a href="index-Friend.html"><i class="nav-header fa-solid fa-user-group"></i></a>
+            <a href="../watch/index.html"><i class="nav-header fa-solid fa-film"></i></a>
+            <a href="../mess/index-mess.html"><i class="nav-header fa-regular fa-comment"></i></a>
+        </div>
+        <div class="nav-right">
+            <img src="../img/imgavt.jpg" alt="">
+            <div class="tendangnhap">Minh Khiết</div>            
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar  sidebar-left">
+            <div class="main-title">
+                <h1><a href="../main-index.html">Trang chủ</a></h1>
+            </div>
+            <div class="btn-wrapper">
+                
+                
+                        <button class="button-wrapper">
+                            <i class="fa-solid fa-compass"></i>
+                            <label class="button-label">
+                                Khám phá
+                            </label>
+                        </button>
+                    
+                        
+                        <button class="button-wrapper">
+                            <i class="fa-solid fa-heart-circle-plus"></i>
+                            <label class="button-label">
+                                Theo dõi
+                            </label>
+                        </button>
+                    
+                        
+                        <button class="button-wrapper">
+                                <i class="fa-solid fa-flag"></i>
+                                <label class="button-label">
+                                    Trang của bạn
+                                </label>
+                        </button> 
+                    
+                        
+                        <button class="button-wrapper buttonplus">
+                            <i class="fa-solid fa-circle-plus"></i>
+                            <label class="button-label">
+                                Tạo trang
+                            </label>
+                        </button> 
+                    <ul id="menuuu">
+                        <li>
+                            <div class="btn-wrapperchild">
+                                
+                                <div id="btn-child">
+                                    <ul>
+                                    <li>
+                                        <i class="fa-solid fa-gear"></i>
+                                        Cài đặt
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-user-pen"></i>
+                                        Chỉnh sửa thông tin cá nhân
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-flag"></i>
+                                        Trang của bạn
+                                    </li>
+                                    <li>
+                                        <input type="button" value="Đăng xuất" onclick="menuseting1()">
+                                    </li>
+                                    </ul>
+                                </div>
+                                <button class="button-wrapper" >
+                                    <i class="fa-solid fa-bars" ></i>
+                                    <label class="button-label">
+                                        Xem thêm
+                                    </label>
+                                </button>
+                            </div>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+        <div class="content">
+            <div class="main-content">
+                <div class="title">
+                    <span>Lời mời kết bạn</span>
+                    <a href="#">Xem tất cả</a>
+                </div>
+                <div class="user_list">
+
+                    <div class="user " id="user1">
+                        <img src="../img/fr1.jpg" alt="">
+                        <p>Ngọc Châu</p>
+                        <span>1 bạn chung</span>
+                        <div class="btn-friend">
+                            <input type="button" value="Xác nhận" id="btn_xn1">
+                            <input type="button" value="Xóa" id="btn_delete1">
+                        </div>
+                    </div>
+
+                    <div class="user " id="user2">
+                        <img src="../img/fr2.jpg" alt="">
+                        <p>Phùng Thị Lệ Hoa</p>
+                        <span>2 bạn chung</span>
+                        <div class="btn-friend">
+                            <input type="button" value="Xác nhận" id="btn_xn2">
+                            <input type="button" value="Xóa" id="btn_delete2">
+                        </div>
+                    </div>
+
+                    <div class="user " id="user3">
+                        <img src="../img/fr3.jpg" alt="">
+                        <p>Tô Thị Cẩm Tú</p>
+                        <span>16 bạn chung</span>
+                        <div class="btn-friend">
+                            <input type="button" value="Xác nhận" id="btn_xn3">
+                            <input type="button" value="Xóa" id="btn_delete3">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="user_list">
+                    <div class="user">
+                        <img src="../img/fr4.jpg" alt="">
+                        <p>Lã Thị Tú Anh</p>
+                        <span>7 bạn chung</span>
+                        <div class="btn-friend">
+                            <input type="button" value="Xác nhận">
+                            <input type="button" value="Xóa">
+                        </div>
+                    </div>
+
+                    <div class="user">
+                        <img src="../img/fr5.jpg" alt="">
+                        <p>Mai Phương Thảo</p>
+                        <span>4 bạn chung</span>
+                        <div class="btn-friend">
+                            <input type="button" value="Xác nhận">
+                            <input type="button" value="Xóa">
+                        </div>
+                    </div>
+
+                    <div class="user">
+                        <img src="../img/fr6.jpg" alt="">
+                        <p>Vũ Như Hải</p>
+                        <span>23 bạn chung</span>
+                        <div class="btn-friend">
+                            <input type="button" value="Xác nhận">
+                            <input type="button" value="Xóa">
+                        </div>
+                    </div>
+                </div>
+                <div class="user_list">
+                    <div class="user">
+                        <img src="../img/fr7.jpg" alt="">
+                        <p>Vũ Thị Ngọc Lan</p>
+                        <span>41 bạn chung</span>
+                        <div class="btn-friend">
+                            <input type="button" value="Xác nhận">
+                            <input type="button" value="Xóa">
+                        </div>
+                    </div>
+
+                    <div class="user">
+                        <img src="../img/fr8.jpg" alt="">
+                        <p>Ngô Phương Thủy</p>
+                        <span>2 bạn chung</span>
+                        <div class="btn-friend">
+                            <input type="button" value="Xác nhận">
+                            <input type="button" value="Xóa">
+                        </div>
+                    </div>
+
+                    <div class="user">
+                        <img src="../img/fr9.jpg" alt="">
+                        <p>Đàm Bích Hường</p>
+                        <span>5 bạn chung</span>
+                        <div class="btn-friend">
+                            <input type="button" value="Xác nhận">
+                            <input type="button" value="Xóa">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="user_list">
+                    <div class="user">
+                        <img src="../img/fr10.jpg" alt="">
+                        <p>Diễm My</p>
+                        <span>8 bạn chung</span>
+                        <div class="btn-friend">
+                            <input type="button" value="Xác nhận">
+                            <input type="button" value="Xóa">
+                        </div>
+                    </div>
+
+                    <div class="user">
+                        <img src="../img/fr11.jpg" alt="">
+                        <p>Trần Quỳnh</p>
+                        <span>53 bạn chung</span>
+                        <div class="btn-friend">
+                            <input type="button" value="Xác nhận">
+                            <input type="button" value="Xóa">
+                        </div>
+                    </div>
+
+                    <div class="user">
+                        <img src="../img/fr12.jpg" alt="">
+                        <p>Mai Phương Tú</p>
+                        <span>41 bạn chung</span>
+                        <div class="btn-friend">
+                            <input type="button" value="Xác nhận">
+                            <input type="button" value="Xóa">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class=" sidebar sidebar-right">
+            <div class="seach">
+               <div class="header_seach">
+                <input type="text">
+                <a href="#" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </a>
+                </div> 
+            </div>
+            
+            <div class="title-right">
+                <div class="nav-title">
+                    <h4>gợi ý cho bạn</h4>
+                    <a href="#">xem tất cả</a>
+                </div>
+            </div>
+
+            <button class="button-wrapper">
+                <img src="../img/291606567_754524409029061_6436237890765867282_n.jpg" alt="">
+                <label class="button-label">
+                    Trang Hà 
+                </label>
+                <div class="hoatdong"></div>
+            </button>
+
+            <button class="button-wrapper">
+                <img src="../img/girl-xinh-7.jpg" alt="">
+                <label class="button-label">
+                    Đỗ Thị Thùy Dung
+                </label>
+                <div class="hoatdong"></div>
+            </button>
+
+            <button class="button-wrapper">
+                <img src="../img/girl-xinh-9-481x600.jpg" alt="">
+                <label class="button-label">
+                    Phùng Thị Trang
+                </label>
+                <div class="hoatdong"></div>
+            </button>
+
+            <button class="button-wrapper">
+                <img src="../img/anh-trai-dep-deo-kinh-600x600.jpg" alt="">
+                <label class="button-label">
+                    Đỗ Đức Tùng
+                </label>
+                <div class="hoatdong"></div>
+            </button>
+
+            <button class="button-wrapper">
+                <img src="../img/download.jpg" alt="">
+                <label class="button-label">
+                    Đức Thắng
+                </label>
+                <div class="hoatdong"></div>    
+            </button>
+
+            <div class="sidebar-wrapper">
+                <div>
+                    <a href="#" class="sidebar-link">Điều khoản sử dụng</a>
+                    <a href="#" class="sidebar-link">Hỗ trợ khách hàng</a> 
+                </div>
+                
+                <a href="#" class="sidebar-link">Extrovent 2022</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="../assets/scrip.js">
+        var user1 = document.getElementById('user1')
+        var btn_xn1 = document.getElementById('btn_xn1')
+        var btn_delete1 = document.getElementById('btn_delete1')
+        btn_delete1.onclick = function () {
+            user1.style.display = 'none';
+        }
+        btn_xn1.onclick = function () {
+            btn_delete1.style.display = 'none';
+            user1.style.backgroundColor = 'aquamarine';
+            btn_xn1.style.width = '100%';
+            btn_xn1.value = 'Loại bỏ';
+            btn_xn1.onclick = function () {
+                user1.style.display = 'none';
+            }
+        }
+
+        var user2 = document.getElementById('user2')
+        var btn_xn2 = document.getElementById('btn_xn2')
+        var btn_delete2 = document.getElementById('btn_delete2')
+        btn_delete2.onclick = function () {
+            user2.style.display = 'none';
+        }
+        btn_xn2.onclick = function () {
+            btn_delete2.style.display = 'none';
+            user2.style.backgroundColor = 'aquamarine';
+            btn_xn2.style.width = '100%';
+            btn_xn2.value = 'Loại bỏ';
+            btn_xn2.onclick = function () {
+                user2.style.display = 'none';
+            }
+        }
+
+        var user3 = document.getElementById('user3')
+        var btn_xn3 = document.getElementById('btn_xn3')
+        var btn_delete3 = document.getElementById('btn_delete3')
+            btn_delete3.onclick = function () {
+            user3.style.display = 'none';
+        }
+        btn_xn3.onclick = function () {
+            btn_delete3.style.display = 'none';
+            user3.style.backgroundColor = 'aquamarine';
+            btn_xn3.style.width = '100%';
+            btn_xn3.value = 'Loại bỏ';
+            btn_xn3.onclick = function () {
+                user3.style.display = 'none';
+            }
+        }
+
+        function menuseting1(){
+            window.location = "../login/index.html";
+        }
+    </script>
+</body>
+</html>
